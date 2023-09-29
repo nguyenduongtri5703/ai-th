@@ -33,13 +33,13 @@ public class Environment {
 	// Update enviroment state when agent do an action
 	public EnvironmentState executeAction(Action action) {
 		// TODO
-		if(action.equals(SUCK_DIRT))
+		if(action.equals(SUCK_DIRT)) {
 			envState.setLocationState(envState.getAgentLocation(), LocationState.CLEAN);
-		
-		if(action.equals(MOVE_RIGHT))
+		}
+		else if(action.equals(MOVE_RIGHT)) {
 			envState.setAgentLocation(LOCATION_B);
-		
-		if(action.equals(MOVE_LEFT))
+		}
+		else
 			envState.setAgentLocation(LOCATION_A);
 		return envState;
 	}
