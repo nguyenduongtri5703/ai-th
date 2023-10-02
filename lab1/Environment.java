@@ -48,7 +48,9 @@ public class Environment {
 	// is in.
 	public Percept getPerceptSeenBy() {
 		// TODO
-		return new Percept(envState.getAgentLocation(), envState.getLocationState(envState.getAgentLocation()));
+		String agentLocation = envState.getAgentLocation();
+		LocationState state = envState.getLocationState(agentLocation);
+		return new Percept(agentLocation, state);
 	}
 
 	public void step() {
